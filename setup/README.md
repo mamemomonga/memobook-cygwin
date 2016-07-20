@@ -6,6 +6,11 @@
 
 [cygwin_setup_64bit.bat](cygwin_setup_64bit.bat) をダウンロードし、管理者として実行する。
 
+cmd.exe を管理者で起動して、以下のコマンドを実行してもよい。
+
+	cd /d %USERPROFILE%\Desktop
+	powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/mamemomonga/memobook-cygwin/master/setup/cygwin_setup_64bit.bat -OutFile cygwin_setup_64bit.bat"
+	cygwin_setup_64bit.bat
 
 ## 32bit版
 
