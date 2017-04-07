@@ -15,7 +15,7 @@ mkdir C:\cygwin64\setup
 cd /d C:\cygwin64\setup
 
 if not exist C:\cygwin64\setup\setup-x86_64.exe ^
-powershell -Command "Invoke-WebRequest https://www.cygwin.com/setup-x86_64.exe -OutFile C:\cygwin64\setup\setup-x86_64.exe"
+powershell -Command "(new-object System.Net.WebClient).Downloadfile('https://www.cygwin.com/setup-x86_64.exe','C:\cygwin64\setup\setup-x86_64.exe')"
 
 C:\cygwin64\setup\setup-x86_64.exe -q -D -L ^
  -s ftp://ftp.iij.ad.jp/pub/cygwin ^

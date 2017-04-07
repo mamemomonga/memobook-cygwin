@@ -9,12 +9,6 @@
 cmd.exe を管理者で起動して、以下のコマンドを実行してもよい。
 
 	cd /d %USERPROFILE%\Desktop
-	powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/mamemomonga/memobook-cygwin/master/setup/cygwin_setup_64bit.bat -OutFile cygwin_setup_64bit.bat"
-	cygwin_setup_64bit.bat
-
-Windows7ではInvoke-WebRequestが動かないのでSystem.Net.WebClientを使う	
-
-	cd /d %USERPROFILE%\Desktop
 	powershell -Command "(new-object System.Net.WebClient).Downloadfile('https://raw.githubusercontent.com/mamemomonga/memobook-cygwin/master/setup/cygwin_setup_64bit.bat', 'cygwin_setup_64bit.bat')"
 	cygwin_setup_64bit.bat
 
