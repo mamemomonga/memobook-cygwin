@@ -39,9 +39,13 @@ Enter を押す。動作が止まったらEnterを押してプロンプトがで
 
 Cygwin Terminal を開き、以下のコマンドをペースト
 
-	$ curl https://raw.githubusercontent.com/mamemomonga/memobook-cygwin/master/dotfiles/dotfiles.tar.gz | tar xv
+	$ curl https://raw.githubusercontent.com/mamemomonga/memobook-cygwin/master/dotfiles/dotfiles.tar.gz | tar zxv
 
 exit でいったん終了し、再度 Cygwin Terminal を起動する。
+
+# デスクトップにsymlinkを貼る
+
+	$ ln -s $(cygpath -u "$USERPROFILE")/Desktop Desktop
 
 # apt-cygの導入
 
