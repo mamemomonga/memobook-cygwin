@@ -35,34 +35,11 @@ cmd.exe を管理者で起動して、以下のコマンドを実行してもよ
 
 Enter を押す。動作が止まったらEnterを押してプロンプトがでたら終了しているので exit で閉じる
 
-# minttyとvimの設定
+# mintty, vim, tmuxの基本的な設定
 
 Cygwin Terminal を開き、以下のコマンドをペースト
 
-	cat > .minttyrc << 'EOS'
-	BoldAsFont=no
-	Font=ＭＳ ゴシック
-	Locale=ja_JP
-	Charset=UTF-8
-	Columns=150
-	Rows=50
-	EOS
-	
-	cat > .vimrc << 'EOS'
-	syntax on
-	set wildmenu
-	set history=100
-	set scrolloff=5
-	set autowrite
-	set tabstop=4
-	set shiftwidth=4
-	set softtabstop=0
-	set termencoding=utf-8
-	set encoding=utf-8
-	set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp,ucs2le,ucs-2
-	set fenc=utf-8
-	set enc=utf-8
-	EOS
+	$ curl https://raw.githubusercontent.com/mamemomonga/memobook-cygwin/master/dotfiles/dotfiles.tar.gz | tar xv
 
 exit でいったん終了し、再度 Cygwin Terminal を起動する。
 
